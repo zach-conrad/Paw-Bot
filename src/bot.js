@@ -21,8 +21,6 @@ for (const folder of functionFolders) {
 }
 
 client.once("ready", () => {
-  console.log(`${client.user.tag} is online!`);
-
   const voiceChannelId = "1123112104317157410";
 
   let channel = client.channels.cache.get(voiceChannelId);
@@ -33,8 +31,6 @@ client.once("ready", () => {
     guildId: channel.guild.id,
     adapterCreator: channel.guild.voiceAdapterCreator,
   });
-
-  console.log("Successfully connected to the voice channel.");
 });
 
 client.handleEvents();
